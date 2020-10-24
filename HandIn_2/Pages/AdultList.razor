@@ -1,0 +1,138 @@
+@page "/AdultList"
+@using HandIn_2.Data
+@using HandIn_2.Models
+@inject IAdultService AdultService
+<select  @onchange="@(args => changeParam(args))">
+    <option value="None">None</option>
+    <option value ="Id">Id</option>
+    <option value="Name">Name</option>
+</select>
+@if (param != "None")
+    {
+        <p>
+            Filter by Selected Option
+            @if (param == "Name")
+                {
+                    <input TYPE="text" @oninput="@((arg) => FilterByParam(param, arg))"/>
+                }
+                else if (param == "Id")
+                {
+                    <input TYPE="number" @oninput="@((arg) => FilterByParam(param, arg))"/>
+                }
+            </p>
+    }
+else
+{
+    <p>Select a option in order to filter by specific param</p>
+}
+    
+    
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Job Title</th>
+        <th>Age</th>
+        <th>Weight</th>
+        <th>Height</th>
+        <th>Hair Color</th>
+        <th>Eye Color</th>
+        <th>Sex</th>
+        <th>Remove</th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (AdultstoShow == null)
+    {
+        <p>
+            <em>Loading...</em>
+        </p>
+    }
+    else if (!AdultstoShow.Any())
+    {
+        <p>
+            <em>There is no Adults.</em>
+        </p>
+    }
+    else
+    {
+        @foreach (var adult in AdultstoShow)
+        {
+            <tr>
+                <td>@adult.Id</td>
+                <td>@adult.FirstName @adult.LastName</td>
+                <td>@adult.JobTitle</td>
+                <td>@adult.Age</td>
+                <td>@adult.Weight</td>
+                <td>@adult.Height</td>
+                <td>@adult.HairColor</td>
+                <td>@adult.EyeColor</td>
+                <td>@adult.Sex</td>
+                <td>
+                    <button @onclick="@(() => RemoveAdult(@adult.Id))">
+                        <i class="oi oi-trash" style="color:red"/>
+                    </button>
+                </td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>
+
+@code
+{
+    private string param = "None";
+    private List<Adult> Adults;
+    private IList<Adult> AdultstoShow ;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Adults = await AdultService.getAdultsAsync();
+        AdultstoShow = Adults;
+    }
+
+    private void FilterByParam(String param, ChangeEventArgs changeEventArgs)
+    {
+        string argument = changeEventArgs.Value.ToString();
+        if (argument.Length > 0)
+        {
+            switch (param)
+            {
+                case "Id":
+
+                    AdultstoShow = Adults.Where(adult => adult.Id == Int32.Parse(argument) && argument != null).ToList();
+                    break;
+                case "Name":
+                    AdultstoShow = Adults.Where(adult => argument.Contains(adult.FirstName) && argument.Contains(adult
+                        .LastName)).ToList();
+                    break;
+
+                default:
+                    AdultstoShow = Adults;
+                    break;
+            }
+        }
+        else
+        {
+            AdultstoShow = Adults;
+        }
+
+        Console.WriteLine(param);
+        System.Console.WriteLine(argument);
+    }
+    private void RemoveAdult(int adultId)
+    {
+        Adult adultToRemove = Adults.First(a => a.Id == adultId);
+        AdultService.RemoveAdultAsync(adultId);
+        Adults.Remove(adultToRemove);
+    }
+
+    private void changeParam(ChangeEventArgs args)
+    {
+        AdultstoShow = Adults;
+        param = args.Value.ToString();
+    }
+}

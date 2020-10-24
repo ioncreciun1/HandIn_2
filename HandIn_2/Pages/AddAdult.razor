@@ -1,0 +1,53 @@
+@page "/AddAdult"
+@using HandIn_2.Models
+@using HandIn_2.Data
+@inject IAdultService AdultService
+@inject NavigationManager NavigationManager
+<EditForm Model="@adult" OnValidSubmit="@addNewAdult" >
+    <DataAnnotationsValidator/> <ValidationSummary/>
+    <div class="Add-Form">
+    <div class="add-left">
+        <p>First Name</p>
+        <InputText placeholder="First Name" @bind-Value="adult.FirstName"/>
+        <p>Job Title</p>
+        <InputText placeholder="Job Title" @bind-Value="adult.JobTitle"/>
+         <p>Hair Color</p>
+        <InputText placeholder="Hair Color" @bind-Value="adult.HairColor"/>
+                <p>Weight</p>
+        <InputNumber placeholder="Weight" @bind-Value="adult.Weight"/>
+                <p>Sex</p>
+                <InputSelect id="sex" @bind-Value="adult.Sex">
+                    <option></option>
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                </InputSelect>
+        
+    </div>
+    <div class="add-right">
+        <p>Last Name</p>
+        <InputText placeholder="Last Name" @bind-Value="adult.LastName"/>
+        <p>Age</p>
+        <InputNumber  placeholder="Age" @bind-Value="adult.Age"/>
+        <p>Eye Color</p>
+        <InputText placeholder="Eye Color" @bind-Value="adult.EyeColor"/>
+        <p>Height</p>
+        <InputNumber placeholder="Height" @bind-Value="adult.Height"/>
+    </div>
+    </div>
+
+<div class="add_adult_button_wrap">
+    <button class="add_adult_button">Add Adult</button>
+</div>
+</EditForm>
+
+@code {
+    private Adult adult = new Adult();
+
+
+    private void addNewAdult()
+    {
+        AdultService.AddAdultAsync(adult);
+        NavigationManager.NavigateTo("/AdultList");
+    }
+
+}
