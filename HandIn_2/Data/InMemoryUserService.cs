@@ -15,8 +15,7 @@ namespace HandIn_2.Data
             {
                 new User
                 {
-                    City = "Aarhus", Domain = "gmail.com", Password = "111111", Role = "Admin", BirthYear = 1998,
-                    SecurityLevel = 2, UserName = "Ion",UserId = 2
+                    Password = "111111", UserName = "Ion",UserId = 2
                 },
 
             }.ToList();

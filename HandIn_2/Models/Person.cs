@@ -7,7 +7,7 @@ using System.Text.Json.Serialization;
 namespace HandIn_2.Models {
 public class Person {
     
-    [JsonPropertyName("id")]
+    [JsonPropertyName("AdultID")]
     public int Id { get; set; }
     
     [JsonPropertyName("firstName")]

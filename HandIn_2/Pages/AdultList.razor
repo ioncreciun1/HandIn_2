@@ -2,31 +2,29 @@
 @using HandIn_2.Data
 @using HandIn_2.Models
 @inject IAdultService AdultService
-<select  @onchange="@(args => changeParam(args))">
+<select @onchange="@(args => changeParam(args))">
     <option value="None">None</option>
-    <option value ="Id">Id</option>
+    <option value="Id">Id</option>
     <option value="Name">Name</option>
 </select>
 @if (param != "None")
-    {
-        <p>
-            Filter by Selected Option
-            @if (param == "Name")
-                {
-                    <input TYPE="text" @oninput="@((arg) => FilterByParam(param, arg))"/>
-                }
-                else if (param == "Id")
-                {
-                    <input TYPE="number" @oninput="@((arg) => FilterByParam(param, arg))"/>
-                }
-            </p>
-    }
+{
+    <p>
+        Filter by Selected Option
+        @if (param == "Name")
+        {
+            <input TYPE="text" @oninput="@((arg) => FilterByParam(param, arg))"/>
+        }
+        else if (param == "Id")
+        {
+            <input TYPE="number" @oninput="@((arg) => FilterByParam(param, arg))"/>
+        }
+    </p>
+}
 else
 {
     <p>Select a option in order to filter by specific param</p>
 }
-    
-    
 
 
 <table class="table">
@@ -86,7 +84,7 @@ else
 {
     private string param = "None";
     private List<Adult> Adults;
-    private IList<Adult> AdultstoShow ;
+    private IList<Adult> AdultstoShow;
 
     protected override async Task OnInitializedAsync()
     {
@@ -103,7 +101,7 @@ else
             {
                 case "Id":
 
-                    AdultstoShow = Adults.Where(adult => adult.Id == Int32.Parse(argument) && argument != null).ToList();
+                    AdultstoShow = Adults.Where(adult => adult.Id == Int32.Parse(argument)).ToList();
                     break;
                 case "Name":
                     AdultstoShow = Adults.Where(adult => argument.Contains(adult.FirstName) && argument.Contains(adult
@@ -119,15 +117,27 @@ else
         {
             AdultstoShow = Adults;
         }
-
-        Console.WriteLine(param);
-        System.Console.WriteLine(argument);
     }
+
     private void RemoveAdult(int adultId)
     {
         Adult adultToRemove = Adults.First(a => a.Id == adultId);
         AdultService.RemoveAdultAsync(adultId);
         Adults.Remove(adultToRemove);
+        if (param != "none")
+        {
+            if (param == "Id")
+            {
+                AdultstoShow = Adults.Where(adult => adult.Id == adultId).ToList();
+            }
+            else
+            {
+                AdultstoShow = Adults.Where(adult => adultToRemove.FirstName.Contains(adult.FirstName) &&
+                                                     adultToRemove.LastName.Contains
+                                                         (adult
+                                                             .LastName)).ToList();
+            }
+        }
     }
 
     private void changeParam(ChangeEventArgs args)

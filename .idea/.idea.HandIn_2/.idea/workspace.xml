@@ -14,33 +14,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa78f576-dd2b-4018-9ec2-6fe03dee7ec7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/HandIn_2/Authenthication/CustomAuthenticationStateProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HandIn_2/Data/AdultService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HandIn_2/Data/IAdultService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HandIn_2/Data/IUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HandIn_2/Data/InMemoryUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HandIn_2/Models/Adult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HandIn_2/Models/Person.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HandIn_2/Models/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HandIn_2/Pages/AddAdult.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HandIn_2/Pages/AdultList.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HandIn_2/Pages/Login.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandIn_2/App.razor" beforeDir="false" afterPath="$PROJECT_DIR$/HandIn_2/App.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandIn_2/Data/WeatherForecast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandIn_2/Data/WeatherForecastService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HandIn_2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HandIn_2/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HandIn_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HandIn_2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandIn_2/Authenthication/CustomAuthenticationStateProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HandIn_2/Authenthication/CustomAuthenticationStateProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandIn_2/Data/AdultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HandIn_2/Data/AdultService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandIn_2/Data/InMemoryUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HandIn_2/Data/InMemoryUserService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HandIn_2/HandIn_2.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HandIn_2/HandIn_2.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandIn_2/Pages/Counter.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandIn_2/Pages/Error.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/HandIn_2/Pages/Error.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandIn_2/Pages/FetchData.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandIn_2/Pages/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/HandIn_2/Pages/Index.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandIn_2/Pages/_Host.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/HandIn_2/Pages/_Host.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandIn_2/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HandIn_2/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandIn_2/Shared/MainLayout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/HandIn_2/Shared/MainLayout.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandIn_2/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/HandIn_2/Shared/NavMenu.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandIn_2/Shared/SurveyPrompt.razor" beforeDir="false" afterPath="$PROJECT_DIR$/HandIn_2/Shared/SurveyPrompt.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandIn_2/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HandIn_2/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandIn_2/_Imports.razor" beforeDir="false" afterPath="$PROJECT_DIR$/HandIn_2/_Imports.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandIn_2/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/HandIn_2/wwwroot/css/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandIn_2/Models/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HandIn_2/Models/Person.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandIn_2/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HandIn_2/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandIn_2/Pages/AdultList.razor" beforeDir="false" afterPath="$PROJECT_DIR$/HandIn_2/Pages/AdultList.razor" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,29 +35,29 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/HandIn_2/Data/InMemoryUserService.cs" />
         <option value="$PROJECT_DIR$/HandIn_2/Data/IUserService.cs" />
         <option value="$PROJECT_DIR$/HandIn_2/Models/Child.cs" />
         <option value="$PROJECT_DIR$/HandIn_2/Models/ChildInterest.cs" />
         <option value="$PROJECT_DIR$/HandIn_2/Models/Family.cs" />
         <option value="$PROJECT_DIR$/HandIn_2/Models/Interest.cs" />
         <option value="$PROJECT_DIR$/HandIn_2/Models/Pet.cs" />
-        <option value="$PROJECT_DIR$/HandIn_2/Models/User.cs" />
         <option value="$PROJECT_DIR$/HandIn_2/Pages/Login.razor" />
-        <option value="$PROJECT_DIR$/HandIn_2/Authenthication/CustomAuthenticationStateProvider.cs" />
         <option value="$PROJECT_DIR$/HandIn_2/Shared/NavMenu.razor" />
         <option value="$PROJECT_DIR$/HandIn_2/wwwroot/css/site.css" />
         <option value="$PROJECT_DIR$/HandIn_2/Pages/_Host.cshtml" />
-        <option value="$PROJECT_DIR$/HandIn_2/Startup.cs" />
         <option value="$PROJECT_DIR$/HandIn_2/App.razor" />
         <option value="$PROJECT_DIR$/HandIn_2/Shared/MainLayout.razor" />
         <option value="$PROJECT_DIR$/HandIn_2/Pages/AddAdult.razor" />
         <option value="$PROJECT_DIR$/HandIn_2/Data/IAdultService.cs" />
         <option value="$PROJECT_DIR$/HandIn_2/Data/Persistence/FileContext.cs" />
-        <option value="$PROJECT_DIR$/HandIn_2/Pages/AdultList.razor" />
         <option value="$PROJECT_DIR$/HandIn_2/Models/Adult.cs" />
         <option value="$PROJECT_DIR$/HandIn_2/Models/Person.cs" />
+        <option value="$PROJECT_DIR$/HandIn_2/Startup.cs" />
         <option value="$PROJECT_DIR$/HandIn_2/Data/AdultService.cs" />
+        <option value="$PROJECT_DIR$/HandIn_2/Models/User.cs" />
+        <option value="$PROJECT_DIR$/HandIn_2/Data/InMemoryUserService.cs" />
+        <option value="$PROJECT_DIR$/HandIn_2/Authenthication/CustomAuthenticationStateProvider.cs" />
+        <option value="$PROJECT_DIR$/HandIn_2/Pages/AdultList.razor" />
       </list>
     </option>
   </component>
@@ -92,6 +74,7 @@
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30015552" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.HandIn_2">
     <configuration name="HandIn_2" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -133,14 +116,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603547557416</updated>
-      <workItem from="1603547602929" duration="4779000" />
+      <workItem from="1603547602929" duration="4893000" />
+      <workItem from="1603888552369" duration="1851000" />
+      <workItem from="1604051234225" duration="2315000" />
+      <workItem from="1604071755707" duration="838000" />
+      <workItem from="1604074991103" duration="2740000" />
+      <workItem from="1604564129996" duration="1843000" />
+      <workItem from="1604591356660" duration="6196000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -152,6 +141,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -165,86 +155,90 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="475" y="68" key="Github.UntrackedFilesDialog/0.0.1360.728@0.0.1360.728" timestamp="1603548781207" />
-    <state width="1317" height="179" key="GridCell.Tab.0.bottom" timestamp="1603553802822">
+    <state width="1317" height="76" key="GridCell.Tab.0.bottom" timestamp="1604604541303">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="179" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1603553802822" />
-    <state width="1317" height="179" key="GridCell.Tab.0.center" timestamp="1603553802821">
+    <state width="1317" height="76" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1604604541303" />
+    <state width="1317" height="76" key="GridCell.Tab.0.center" timestamp="1604604541303">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="179" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1603553802821" />
-    <state width="1317" height="179" key="GridCell.Tab.0.left" timestamp="1603553802821">
+    <state width="1317" height="76" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1604604541303" />
+    <state width="1317" height="76" key="GridCell.Tab.0.left" timestamp="1604604541302">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="179" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1603553802821" />
-    <state width="1317" height="179" key="GridCell.Tab.0.right" timestamp="1603553802822">
+    <state width="1317" height="76" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1604604541302" />
+    <state width="1317" height="76" key="GridCell.Tab.0.right" timestamp="1604604541303">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="179" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1603553802822" />
-    <state width="1317" height="250" key="GridCell.Tab.1.bottom" timestamp="1603551314043">
+    <state width="1317" height="76" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1604604541303" />
+    <state width="1317" height="250" key="GridCell.Tab.1.bottom" timestamp="1603554095364">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="250" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1603551314043" />
-    <state width="1317" height="250" key="GridCell.Tab.1.center" timestamp="1603551314043">
+    <state width="1317" height="250" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1603554095364" />
+    <state width="1317" height="250" key="GridCell.Tab.1.center" timestamp="1603554095364">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="250" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1603551314043" />
-    <state width="1317" height="250" key="GridCell.Tab.1.left" timestamp="1603551314043">
+    <state width="1317" height="250" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1603554095364" />
+    <state width="1317" height="250" key="GridCell.Tab.1.left" timestamp="1603554095364">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="250" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1603551314043" />
-    <state width="1317" height="250" key="GridCell.Tab.1.right" timestamp="1603551314043">
+    <state width="1317" height="250" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1603554095364" />
+    <state width="1317" height="250" key="GridCell.Tab.1.right" timestamp="1603554095364">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="250" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1603551314043" />
-    <state width="1317" height="250" key="GridCell.Tab.2.bottom" timestamp="1603551314044">
+    <state width="1317" height="250" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1603554095364" />
+    <state width="1317" height="250" key="GridCell.Tab.2.bottom" timestamp="1603554095365">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="250" key="GridCell.Tab.2.bottom/0.0.1360.728@0.0.1360.728" timestamp="1603551314044" />
-    <state width="1317" height="250" key="GridCell.Tab.2.center" timestamp="1603551314044">
+    <state width="1317" height="250" key="GridCell.Tab.2.bottom/0.0.1360.728@0.0.1360.728" timestamp="1603554095365" />
+    <state width="1317" height="250" key="GridCell.Tab.2.center" timestamp="1603554095364">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="250" key="GridCell.Tab.2.center/0.0.1360.728@0.0.1360.728" timestamp="1603551314044" />
-    <state width="1317" height="250" key="GridCell.Tab.2.left" timestamp="1603551314043">
+    <state width="1317" height="250" key="GridCell.Tab.2.center/0.0.1360.728@0.0.1360.728" timestamp="1603554095364" />
+    <state width="1317" height="250" key="GridCell.Tab.2.left" timestamp="1603554095364">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="250" key="GridCell.Tab.2.left/0.0.1360.728@0.0.1360.728" timestamp="1603551314043" />
-    <state width="1317" height="250" key="GridCell.Tab.2.right" timestamp="1603551314044">
+    <state width="1317" height="250" key="GridCell.Tab.2.left/0.0.1360.728@0.0.1360.728" timestamp="1603554095364" />
+    <state width="1317" height="250" key="GridCell.Tab.2.right" timestamp="1603554095365">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="250" key="GridCell.Tab.2.right/0.0.1360.728@0.0.1360.728" timestamp="1603551314044" />
-    <state width="1317" height="250" key="GridCell.Tab.3.bottom" timestamp="1603551314045">
+    <state width="1317" height="250" key="GridCell.Tab.2.right/0.0.1360.728@0.0.1360.728" timestamp="1603554095365" />
+    <state width="1317" height="250" key="GridCell.Tab.3.bottom" timestamp="1603554095365">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="250" key="GridCell.Tab.3.bottom/0.0.1360.728@0.0.1360.728" timestamp="1603551314045" />
-    <state width="1317" height="250" key="GridCell.Tab.3.center" timestamp="1603551314045">
+    <state width="1317" height="250" key="GridCell.Tab.3.bottom/0.0.1360.728@0.0.1360.728" timestamp="1603554095365" />
+    <state width="1317" height="250" key="GridCell.Tab.3.center" timestamp="1603554095365">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="250" key="GridCell.Tab.3.center/0.0.1360.728@0.0.1360.728" timestamp="1603551314045" />
-    <state width="1317" height="250" key="GridCell.Tab.3.left" timestamp="1603551314044">
+    <state width="1317" height="250" key="GridCell.Tab.3.center/0.0.1360.728@0.0.1360.728" timestamp="1603554095365" />
+    <state width="1317" height="250" key="GridCell.Tab.3.left" timestamp="1603554095365">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="250" key="GridCell.Tab.3.left/0.0.1360.728@0.0.1360.728" timestamp="1603551314044" />
-    <state width="1317" height="250" key="GridCell.Tab.3.right" timestamp="1603551314045">
+    <state width="1317" height="250" key="GridCell.Tab.3.left/0.0.1360.728@0.0.1360.728" timestamp="1603554095365" />
+    <state width="1317" height="250" key="GridCell.Tab.3.right" timestamp="1603554095365">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="250" key="GridCell.Tab.3.right/0.0.1360.728@0.0.1360.728" timestamp="1603551314045" />
-    <state width="1317" height="250" key="GridCell.Tab.4.bottom" timestamp="1603551314046">
+    <state width="1317" height="250" key="GridCell.Tab.3.right/0.0.1360.728@0.0.1360.728" timestamp="1603554095365" />
+    <state width="1317" height="250" key="GridCell.Tab.4.bottom" timestamp="1603554095366">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="250" key="GridCell.Tab.4.bottom/0.0.1360.728@0.0.1360.728" timestamp="1603551314046" />
-    <state width="1317" height="250" key="GridCell.Tab.4.center" timestamp="1603551314046">
+    <state width="1317" height="250" key="GridCell.Tab.4.bottom/0.0.1360.728@0.0.1360.728" timestamp="1603554095366" />
+    <state width="1317" height="250" key="GridCell.Tab.4.center" timestamp="1603554095365">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="250" key="GridCell.Tab.4.center/0.0.1360.728@0.0.1360.728" timestamp="1603551314046" />
-    <state width="1317" height="250" key="GridCell.Tab.4.left" timestamp="1603551314045">
+    <state width="1317" height="250" key="GridCell.Tab.4.center/0.0.1360.728@0.0.1360.728" timestamp="1603554095365" />
+    <state width="1317" height="250" key="GridCell.Tab.4.left" timestamp="1603554095365">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="250" key="GridCell.Tab.4.left/0.0.1360.728@0.0.1360.728" timestamp="1603551314045" />
-    <state width="1317" height="250" key="GridCell.Tab.4.right" timestamp="1603551314046">
+    <state width="1317" height="250" key="GridCell.Tab.4.left/0.0.1360.728@0.0.1360.728" timestamp="1603554095365" />
+    <state width="1317" height="250" key="GridCell.Tab.4.right" timestamp="1603554095365">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1317" height="250" key="GridCell.Tab.4.right/0.0.1360.728@0.0.1360.728" timestamp="1603551314046" />
+    <state width="1317" height="250" key="GridCell.Tab.4.right/0.0.1360.728@0.0.1360.728" timestamp="1603554095365" />
+    <state x="272" y="95" key="Rider.ProjectTemplateDialog.Size" timestamp="1604051527154">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="272" y="95" key="Rider.ProjectTemplateDialog.Size/0.0.1360.728@0.0.1360.728" timestamp="1604051527154" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
