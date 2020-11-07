@@ -2,29 +2,39 @@
 @using HandIn_2.Data
 @using HandIn_2.Models
 @inject IAdultService AdultService
-<select @onchange="@(args => changeParam(args))">
-    <option value="None">None</option>
-    <option value="Id">Id</option>
-    <option value="Name">Name</option>
-</select>
-@if (param != "None")
-{
-    <p>
-        Filter by Selected Option
-        @if (param == "Name")
-        {
-            <input TYPE="text" @oninput="@((arg) => FilterByParam(param, arg))"/>
-        }
-        else if (param == "Id")
-        {
-            <input TYPE="number" @oninput="@((arg) => FilterByParam(param, arg))"/>
-        }
-    </p>
-}
-else
-{
-    <p>Select a option in order to filter by specific param</p>
-}
+<div class="filter">
+
+    <div class="Search">
+        <p>FirstName:</p>
+        <input type="text" @bind="@firstName"/>
+        <p>LastName:</p>
+        <input type="text" @bind="@lastName"/>
+    </div>
+        <div>
+            <p>JobTitle:</p>
+            <input type="text" @bind="@jobTitle"/>
+            <p>Sex:</p>
+            <select @bind="@Sex">
+                <option></option>
+                <option>M</option>
+                <option>F</option>
+            </select>
+        </div>
+    <div>
+        <p>HairColor:</p>
+        <input type="text" @bind="@hairColor"/>
+        <p>EyeColor:</p>
+        <input type="text" @bind="@eyecolor"/>
+    </div>
+    <div>
+        <p>Age:</p>
+        <input type="number" @bind="@age"/>
+        <p>AdultID:</p>
+        <input type="number" @bind="@adultID"/>
+    </div>
+    <button class="SubmitButton" @onclick="@SearchByParam">Search</button>
+</div>
+
 
 
 <table class="table">
@@ -82,67 +92,34 @@ else
 
 @code
 {
-    private string param = "None";
+    private string firstName;
+    private string lastName;
+    private string jobTitle;
+    private string hairColor;
+    private string eyecolor;
+    private int? age;
+    private int? adultID;
+    private string Sex;
     private List<Adult> Adults;
     private IList<Adult> AdultstoShow;
 
     protected override async Task OnInitializedAsync()
     {
-        Adults = await AdultService.getAdultsAsync();
+        Adults = await AdultService.getAdultsAsync(firstName,lastName,jobTitle,hairColor,eyecolor,Sex,age,adultID);
         AdultstoShow = Adults;
     }
-
-    private void FilterByParam(String param, ChangeEventArgs changeEventArgs)
-    {
-        string argument = changeEventArgs.Value.ToString();
-        if (argument.Length > 0)
-        {
-            switch (param)
-            {
-                case "Id":
-
-                    AdultstoShow = Adults.Where(adult => adult.Id == Int32.Parse(argument)).ToList();
-                    break;
-                case "Name":
-                    AdultstoShow = Adults.Where(adult => argument.Contains(adult.FirstName) && argument.Contains(adult
-                        .LastName)).ToList();
-                    break;
-
-                default:
-                    AdultstoShow = Adults;
-                    break;
-            }
-        }
-        else
-        {
-            AdultstoShow = Adults;
-        }
-    }
+    
 
     private void RemoveAdult(int adultId)
     {
         Adult adultToRemove = Adults.First(a => a.Id == adultId);
         AdultService.RemoveAdultAsync(adultId);
         Adults.Remove(adultToRemove);
-        if (param != "none")
-        {
-            if (param == "Id")
-            {
-                AdultstoShow = Adults.Where(adult => adult.Id == adultId).ToList();
-            }
-            else
-            {
-                AdultstoShow = Adults.Where(adult => adultToRemove.FirstName.Contains(adult.FirstName) &&
-                                                     adultToRemove.LastName.Contains
-                                                         (adult
-                                                             .LastName)).ToList();
-            }
-        }
     }
 
-    private void changeParam(ChangeEventArgs args)
+    private async Task SearchByParam()
     {
+        Adults = await AdultService.getAdultsAsync(firstName,lastName,jobTitle,hairColor,eyecolor,Sex,age,adultID);
         AdultstoShow = Adults;
-        param = args.Value.ToString();
     }
 }

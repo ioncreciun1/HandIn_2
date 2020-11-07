@@ -34,10 +34,59 @@ namespace HandIn_2.Data
 
         }
 
-        public async Task<List<Adult>> getAdultsAsync()
+        public async Task<List<Adult>> getAdultsAsync(
+            string firstName,
+            string lastName,
+            string jobTitle,
+            string hairColor,
+            string eyeColor,
+            string sex,
+            int? age,
+            int? AdultID
+            )
         {
+            string uri = "https://localhost:5005/Adult?";
+            if (firstName != null)
+            {
+                uri += $"&firstName={firstName}";
+            }
 
-            string uri = "https://localhost:5005/Adult";
+            if (lastName != null)
+            {
+                uri += $"&lastName={lastName}";
+            }
+
+            if (jobTitle != null)
+            {
+                uri += $"&jobTitle={jobTitle}";
+            }
+
+            if (hairColor != null)
+            {
+                uri += $"&hairColor={hairColor}";
+            }
+
+            if (eyeColor != null)
+            {
+                uri += $"&eyeColor={eyeColor}";
+            }
+
+            if (sex != null)
+            {
+                uri += $"&sex={sex}";
+            }
+
+            if (age != null)
+            {
+                uri += $"&age={age}";
+            }
+
+            if (AdultID != null)
+            {
+                uri += $"&AdultID={AdultID}";
+            }
+            
+            
             string message = await Client.GetStringAsync(uri);
             List<Adult> adults = JsonSerializer.Deserialize <List<Adult>>(message);
             return adults;

@@ -1,13 +1,11 @@
 using System.ComponentModel.DataAnnotations;
+using System.Xml.Serialization;
 
 namespace HandIn_2.Models
 {
     public class User
     {
-        [Required]
-        [Range(1, int.MaxValue, ErrorMessage = "Please enter a value bigger than {1}")]
-        public int UserId { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
+        public string userName { get; set; }
+        public string password { get; set; }
     }
 }

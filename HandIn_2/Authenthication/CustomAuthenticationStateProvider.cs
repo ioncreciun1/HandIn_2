@@ -45,16 +45,16 @@ namespace HandIn_2.Authenthication
             return await Task.FromResult(new AuthenticationState(cachedClaimsPrincipal));
         }
 
-        public void ValidateLogin(string username, string password)
+        public async Task ValidateLogin(string username, string password)
         {
-            Console.WriteLine("Validating log in");
+            
             if (string.IsNullOrEmpty(username)) throw new Exception("Enter username");
             if (string.IsNullOrEmpty(password)) throw new Exception("Enter password");
 
             ClaimsIdentity identity = new ClaimsIdentity();
             try
             {
-                User user = userService.ValidateUser(username, password);
+                User user = await userService.ValidateUser(username, password);
                 identity = SetupClaimsForUser(user);
                 string serialisedData = JsonSerializer.Serialize(user);
                 jsRuntime.InvokeVoidAsync("sessionStorage.setItem", "currentUser", serialisedData);
@@ -64,7 +64,7 @@ namespace HandIn_2.Authenthication
             {
                 throw e;
             }
-
+            Console.WriteLine("Validating log in");
             NotifyAuthenticationStateChanged(
                 Task.FromResult(new AuthenticationState(new ClaimsPrincipal(identity))));
         }
@@ -84,9 +84,7 @@ namespace HandIn_2.Authenthication
         private ClaimsIdentity SetupClaimsForUser(User user)
         {
             List<Claim> claims = new List<Claim>();
-            claims.Add(new Claim(ClaimTypes.Name, user.UserName));
-            claims.Add(new Claim("ID", user.UserId.ToString()));
-
+            claims.Add(new Claim(ClaimTypes.Name, user.userName));
             ClaimsIdentity identity = new ClaimsIdentity(claims, "apiauth_type");
             return identity;
         }

@@ -1,35 +1,34 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Text.Json;
+using System.Threading.Tasks;
 using HandIn_2.Models;
 
 namespace HandIn_2.Data
 {
     public class InMemoryUserService : IUserService
     {
-        private List<User> users;
-
-        public InMemoryUserService()
+        private HttpClient Client;
+        public  InMemoryUserService()
         {
-            users = new[]
-            {
-                new User
-                {
-                    Password = "111111", UserName = "Ion",UserId = 2
-                },
-
-            }.ToList();
+            Client = new HttpClient();
         }
-
-        public User ValidateUser(string userName, string password)
+        
+        public async  Task<User> ValidateUser(string userName, string password)
         {
-            User first = users.FirstOrDefault(user => user.UserName.Equals(userName));
+            string uri = "https://localhost:5005/User";
+            string message = await Client.GetStringAsync(uri);
+            List<User> users = JsonSerializer.Deserialize<List<User>>(message);
+
+            User first = users.Find(user=>user.userName.Equals(userName));
             if (first == null)
             {
                 throw new Exception("User not found");
             }
-
-            if (!first.Password.Equals(password))
+            
+            if (!first.password.Equals(password))
             {
                 throw new Exception("Incorrect password");
             }

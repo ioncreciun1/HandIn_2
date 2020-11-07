@@ -242,3 +242,18 @@ app {
 .add_adult_button_wrap{
     display: flex;
 }
+.filter
+{
+    display: flex;
+}
+/*.filter input {*/
+/*    width:100px;*/
+/*}*/
+
+.filter p{
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+.filter div{
+    margin-right: 1rem;
+}
