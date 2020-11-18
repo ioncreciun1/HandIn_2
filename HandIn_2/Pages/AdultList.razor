@@ -56,7 +56,7 @@
     @if (AdultstoShow == null)
     {
         <p>
-            <em>Loading...</em>
+            <em>Search For Adults</em>
         </p>
     }
     else if (!AdultstoShow.Any())
@@ -105,7 +105,7 @@
     
     protected override async Task OnInitializedAsync()
     {
-        Adults = await AdultService.getAdultsAsync(firstName,lastName,jobTitle,hairColor,eyecolor,Sex,age,adultID);
+        //Adults = await AdultService.getAdultsAsync(firstName,lastName,jobTitle,hairColor,eyecolor,Sex,age,adultID);
         AdultstoShow = Adults;
     }
     

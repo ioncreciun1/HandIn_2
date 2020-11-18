@@ -25,15 +25,16 @@ namespace HandIn_2.Data
             try
             {
                 first = users.First(user => user.userName==userName);
-                if (!first.password.Equals(password))
-                {
-                    throw new Exception("Incorrect password");
-                }
+                
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
                 throw new Exception("User not found");
+            }
+            if (!first.password.Equals(password))
+            {
+                throw new Exception("Incorrect password");
             }
             
             
