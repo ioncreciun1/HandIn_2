@@ -18,20 +18,28 @@ namespace HandIn_2.Data
         
         public async  Task<User> ValidateUser(string userName, string password)
         {
-            string uri = "https://localhost:5005/User";
+            string uri = "https://localhost:5007/User";
             string message = await Client.GetStringAsync(uri);
             List<User> users = JsonSerializer.Deserialize<List<User>>(message);
-
-            User first = users.Find(user=>user.userName.Equals(userName));
-            if (first == null)
+            User first;
+            try
             {
+                first = users.First(user => user.userName==userName);
+                if (!first.password.Equals(password))
+                {
+                    throw new Exception("Incorrect password");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
                 throw new Exception("User not found");
             }
             
-            if (!first.password.Equals(password))
-            {
-                throw new Exception("Incorrect password");
-            }
+            
+           
+            
+
 
             return first;
         }

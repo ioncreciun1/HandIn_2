@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 namespace HandIn_2.Models {
 public class Adult : Person {
     
-    [JsonPropertyName("jobTitle")]
+    [JsonPropertyName("JobTitle")]
     [Required]
     public string JobTitle { get; set; }
 

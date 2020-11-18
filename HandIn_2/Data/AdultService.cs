@@ -23,7 +23,7 @@ namespace HandIn_2.Data
         
         public async Task AddAdultAsync(Adult adult)
         {
-            string uri = "https://localhost:5005/Adult";
+            string uri = "https://localhost:5007/Adult";
             string message = await Client.GetStringAsync(uri);
             adults = JsonSerializer.Deserialize <List<Adult>>(message);
             int max = adults.Max(Adult => Adult.Id);
@@ -45,7 +45,7 @@ namespace HandIn_2.Data
             int? AdultID
             )
         {
-            string uri = "https://localhost:5005/Adult?";
+            string uri = "https://localhost:5007/Adult?";
             if (firstName != null)
             {
                 uri += $"&firstName={firstName}";
@@ -94,7 +94,7 @@ namespace HandIn_2.Data
 
         public async Task RemoveAdultAsync(int adultID)
         {
-            string uri = $"https://localhost:5005/Adult/{adultID}";
+            string uri = $"https://localhost:5007/Adult/{adultID}";
             HttpResponseMessage message = await Client.DeleteAsync(uri);
             
         }

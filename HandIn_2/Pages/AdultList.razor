@@ -102,7 +102,7 @@
     private string Sex;
     private List<Adult> Adults;
     private IList<Adult> AdultstoShow;
-
+    
     protected override async Task OnInitializedAsync()
     {
         Adults = await AdultService.getAdultsAsync(firstName,lastName,jobTitle,hairColor,eyecolor,Sex,age,adultID);
